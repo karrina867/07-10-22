@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            background-image: url("background.jpg");
+            background-size: cover;
+            background-position: center;
+           
+            /*1.Шаг
+            */
+            display: grid;
+            /*2шаг*/
+            grid-template-rows: 5% 5% 40% 5% 30% 5%;
+            grid-template-columns:5% 10% 1fr 1fr 22% 5%;
+                        /*4 шаг*/
+            grid-template-areas: 
+            "header header header header header header"
+            ". . loren1 loren2 loren3 loren3"
+            "list list loren1 loren2 loren3 loren3"
+            ". . loren1 loren2 loren3 loren3"
+            " . second second second second ."
+            "footer footer footer footer footer footer";
+
+            grid-gap: 10px;
+        }
+        ul{
+            list-style-type: none;
+        }
+        h1,h2,p{
+            margin: 0;
+            text-align: center;
+            color:wheat;
+        }
+        img{
+            width: 100px;
+            float: left;
+        }
+     
+       
+        .header{
+            background-color: blue;
+            grid-area: header;
+        }
+        .list{
+            background-color: blue;
+
+            grid-area: list;
+        }
+        
+        .loren1{
+            grid-area: loren1;
+            background-color: blue;
+        }
+        .loren2{
+            grid-area: loren2;
+            background-color: blue;
+
+        }
+
+        .loren3{
+            grid-area: loren3;
+            background-color: blue;
+
+        }
+        .second{
+            grid-area: second;
+            background-color: blue;
+            flex-direction:row;
+           
+
+            display: flex;
+            align-items: center;
+
+          
+           
+        }
+       
+        .footer{
+            grid-area: footer;
+            background-color: blue;
+
+        }
+       
+    </style>
+</head>
+<body>
+   <div class="header"><h1>Header</h1></div> 
+    
+    <ul class="list">
+        <li>lorem</li>
+        <li>lorem</li>
+        <li>lorem</li>
+        <li>lorem</li>
+        <li>lorem</li>
+        <li>lorem</li>
+    </ul>
+    <div class="loren1">
+        <h1>Lorem</h1>
+        <img src="img1.jpg" alt="picter 1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, qui rerum voluptates ipsum perferendis veniam quaerat! Cum ipsam fugiat corrupti magni voluptate, consequatur itaque impedit et a maiores quos autem?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quae suscipit cupiditate! Natus perferendis, eum optio facilis porro sunt placeat fuga hic mollitia nisi voluptatibus molestias dolore quia fugiat necessitatibus! </p>
+    </div>
+        <div class="loren2">
+            <h1>Lorem</h1>
+            <img src="img2.jpg" alt="picter 2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, qui rerum voluptates ipsum perferendis veniam quaerat! Cum ipsam fugiat corrupti magni voluptate, consequatur itaque impedit et a maiores quos autem?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam soluta ipsa in labore recusandae, neque a nostrum tenetur nam, suscipit, perspiciatis voluptates aut mollitia magnam! Esse modi ipsa tempore commodi.</p>
+        </div>
+        <div class="loren3">
+            <h1>Lorem</h1>
+            <img src="img3.jpg" alt="picter 3">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, qui rerum voluptates ipsum perferendis veniam quaerat! Cum ipsam fugiat corrupti magni voluptate, consequatur itaque impedit et a maiores quos autem?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis ipsa iusto, quam deleniti explicabo id. Sed perferendis alias eos at? Distinctio laborum vel, illum aliquam sint exercitationem hic sunt expedita.</p>
+        </div>
+    
+    <div class="second">
+        <div>
+            <h2>Lorem</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, qui rerum voluptates ipsum perferendis veniam quaerat! Cum ipsam fugiat corrupti magni voluptate, consequatur itaque impedit et a maiores quos autem?</p>
+        </div>
+        <div>
+            <h2>Lorem</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, qui rerum voluptates ipsum perferendis veniam quaerat! Cum ipsam fugiat corrupti magni voluptate, consequatur itaque impedit et a maiores quos autem?</p>
+        </div>
+        <div>
+            <h2>Lorem</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, qui rerum voluptates ipsum perferendis veniam quaerat! Cum ipsam fugiat corrupti magni voluptate, consequatur itaque impedit et a maiores quos autem?</p>
+        </div>
+    </div>
+    <div class="footer">  <h1 >Footer</h1> </div>
+  
+</body>
+</html>
